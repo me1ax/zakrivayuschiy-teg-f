@@ -16,6 +16,7 @@
   font-family: var(--font-main);
   font-weight: var(--font-weight-card-text);
   background-image: var(--page-background);
+  font-variation-settings: "wght" 400;
   background-size: cover;
   display: grid;
   justify-content: center;
@@ -46,7 +47,6 @@
 
 .logo-caption-text {
   display: block;
-  text-transform: lowercase;
   font-size: var(--logo-caption-size);
   margin-top: 20px;
   text-transform: uppercase;
@@ -156,7 +156,6 @@ main {
   justify-self: center;
   padding: 15px;
   display: flex;
-  gap:3.5px;
   border:2px solid black;
   background-color: white;
   margin-top: 50px;
@@ -167,15 +166,9 @@ main {
   width: clamp(306px, calc(2.72vw + 295.8px), 335px);
 }
 
-.icon-dialog {
-  width: 39px;
-  height: 39px;
-}
-
 .dialog-window {
   margin: 0;
   padding: 0;
-  border: none;
   background: none;
   top: 50%;
   left: 50%;
@@ -184,7 +177,6 @@ main {
   max-width: 90vw;
   background: white;
   border: 2px solid black;
-  padding: 0;
   flex-direction: column;
 }
 
@@ -286,7 +278,7 @@ main {
 
 .card__like-button::before,
 .button-dialog::before,
-.bottom-btn::before{
+.bottom-btn::before {
   content: "";
   background-color: #000;
   inset: 0;
@@ -310,10 +302,6 @@ main {
 
 .card__icon-button:focus-visible {
   outline: 2px solid black;
-}
-
-.like-icon {
-  cursor: pointer;
 }
 
 .sparks {
@@ -377,7 +365,7 @@ main {
 }
 
 @media (width <= 375px) {
-  .bottom-btn{
+  .bottom-btn {
     flex-flow: column;
   }
 
