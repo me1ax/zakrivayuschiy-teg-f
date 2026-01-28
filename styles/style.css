@@ -72,6 +72,7 @@ main {
   font-weight: var(--font-weight-card-title);
   border-bottom: 2px solid black;
   padding: 4px 10px;
+  font-variation-settings: normal;
 }
 
 .image-wrapper {
