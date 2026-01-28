@@ -169,7 +169,6 @@ main {
 .dialog-window {
   margin: 0;
   padding: 0;
-  background: none;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
