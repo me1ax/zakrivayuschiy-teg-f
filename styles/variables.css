@@ -1,8 +1,8 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-    --font-main: "Inter",  sans-serif;
-    --font-start2P: 'PressStart2P', monospace;
+    --font-main: "Inter";
+    --accent-font: 'PressStart2P';
     --font-weight-card-text: 410;
     --font-weight-card-title: 715;
     --page-background: 
@@ -25,7 +25,7 @@
     --container-width: clamp(375px, 90vw, 700px);
     --logo-main-size: clamp(49px, 12vw, 65px);
     --logo-caption-size: clamp(14px, calc(0.845vw + 10.83px), 23px);
-    --text-card-width: clamp(321px, calc(30.5vw + 207px), 646px);
+    --text-card-width: clamp(321px, calc(30.5vw + 206px), 646px);
     --label-border-color: #fff;
     --animation-fill-color: red;
     --contour-color: black;
