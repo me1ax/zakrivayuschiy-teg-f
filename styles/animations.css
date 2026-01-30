@@ -9,7 +9,7 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
-.like-icon .heart{
+.like-icon .heart {
     transform-origin: center;
     transform-box: fill-box;
   }

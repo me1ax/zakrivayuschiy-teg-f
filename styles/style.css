@@ -148,12 +148,9 @@ main {
 }
 
 .card__icon-button {
+  display: flex;
   background-color: initial;
   border: none;
-}
-
-.card__icon-button {
-  display: flex;
 }
 
 .card__like-button {
