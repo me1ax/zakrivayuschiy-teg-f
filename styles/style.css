@@ -34,6 +34,7 @@
   justify-content: center;
   background-color: white;
   margin-bottom: 98px;
+  padding-block: clamp(7.5rem, 15vw, 8rem);
 }
 
 .border {
@@ -45,7 +46,6 @@
   text-transform: uppercase;
   font-size: var(--logo-main-size);
   line-height: 1;
-  margin: calc(clamp(122px, calc(-2.73vh + 134.21px), 130px))-2px clamp(16px, calc(-10vw + 160px), 122.5px);
   font-family: var(--accent-font), monospace;
   font-weight: 400;
 }
@@ -82,8 +82,7 @@ main {
   display: flex;
   position: relative;
   width: 100%;
-  margin-bottom: 18px;
-  border-top: 2px solid black;
+  margin-bottom: 23px;
   border-bottom: 2px solid black;
 }
 
@@ -91,7 +90,7 @@ main {
   position: absolute;
   top: 20px;
   right: 25px;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), monospace;
   font-size: 14px;
   font-weight: 400;
   line-height: 1;
@@ -114,19 +113,14 @@ main {
   (text-stroke: 1px black) {
   
   .label {
-    color: transparent;
-    -webkit-text-stroke: 1px var(--label-border-color);
     text-stroke: 1px var(--label-border-color);
-    -webkit-text-fill-color: rgba(0, 0, 0, 1);
-    text-fill-color: rgba(0, 0, 0, 1);
-    text-shadow: none;
   }
 }
 
 .text-card {
   display: grid;
   gap:22px;
-  width:var(--text-card-width);
+  width: calc(100% - 50px);
   margin:0 25px;
   font-size: 18px;
   line-height: 21px;
@@ -155,14 +149,11 @@ main {
 
 .card__like-button {
   padding: 12px 35px;
-  font-family: var(--accent-font), monospace;
   font-size: 14px;
   max-width: 130px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
-  cursor: pointer;
 }
 
 .save-icon {
@@ -173,11 +164,9 @@ main {
 
 .button-save {
   justify-self: center;
-  padding: 20px;
+  padding:15px 20px;
   display: flex;
-  background-color: white;
   margin-top: 50px;
-  font-family: var(--accent-font), monospace;
   font-size: 14px;
   align-items: center;
   gap: 8px;
@@ -200,7 +189,8 @@ main {
 }
 
 .text-icon-dialog {
-  display: flex;
+  display: grid;
+  grid-template-columns: min-content 1fr;
   align-items: center;
   gap: 16px;
   padding: 30px 30px 20px;
@@ -224,13 +214,12 @@ main {
 }
 
 .button-dialog {
-  display: flex;
-  margin: 0 auto 30px;
-  padding: 12.5px 132px;
-  font-family: var(--accent-font), monospace;
+  width: 100%;
+  padding: 9px 17px;
   font-size: 14px;
-  background: white;
   text-transform: uppercase;
+  line-height: 1;
+  grid-column: 1/3;
 }
 
 .filter-brightness-saturate {
@@ -331,7 +320,6 @@ main {
 
 .like-icon:hover .core {
   fill:black;
-  transition-delay: 0;
 }
 
 .like-icon:hover .main-body {
@@ -341,7 +329,6 @@ main {
 
 .like-icon:active .core {
   fill:var(--animation-fill-color);
-  transition-delay: 0;
 }
 
 .like-icon:active .main-body {
@@ -349,9 +336,13 @@ main {
   transition-delay: 0.05s;
 }
 
-.like-icon.is-liked .core,
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
+}
+
 .like-icon.is-liked .main-body {
   fill: var(--animation-fill-color);
+  transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .contour {
@@ -370,11 +361,10 @@ main {
 @media (width <= 375px) {
   .button-save {
     flex-flow: column;
-    padding-top:10px;
   }
 
   .image-wrapper {
-    margin-bottom: 23px;
+    margin-bottom: 25px;
   }
 
   .logo {
@@ -390,5 +380,9 @@ main {
   .button-dialog {
     margin: 0 auto;
     padding: 12.5px 116px;
+  }
+
+  .label {
+    top:25px;
   }
 }
