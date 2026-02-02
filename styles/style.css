@@ -84,6 +84,7 @@ main {
   width: 100%;
   margin-bottom: 23px;
   border-bottom: 2px solid black;
+  aspect-ratio: 1 / 1;
 }
 
 .label {
@@ -113,7 +114,9 @@ main {
   (text-stroke: 1px black) {
   
   .label {
+    -webkit-text-stroke: 1px var(--label-border-color);
     text-stroke: 1px var(--label-border-color);
+    text-shadow: none;
   }
 }
 
@@ -192,8 +195,9 @@ main {
   display: grid;
   grid-template-columns: min-content 1fr;
   align-items: center;
-  gap: 16px;
-  padding: 30px 30px 20px;
+  row-gap: 30px;
+  column-gap: 20px;
+  padding: 30px;
 }
 
 .icon-dialog {
@@ -305,7 +309,7 @@ main {
 }
 
 .contour {
-  transition: fill 0.1s linear;
+  transition: fill 0.1s linear 0s;
 }
 
 .core {
@@ -315,10 +319,11 @@ main {
 
 .main-body {
   fill: transparent;
-  transition: fill 0.3s linear;
+  transition: fill 0.3s linear 0s;
 }
 
 .like-icon:hover .core {
+  transition: fill 0.3s linear 0s;
   fill:black;
 }
 
@@ -328,6 +333,7 @@ main {
 }
 
 .like-icon:active .core {
+  transition: fill 0.3s linear 0s;
   fill:var(--animation-fill-color);
 }
 
@@ -337,6 +343,7 @@ main {
 }
 
 .like-icon.is-liked .core {
+  transition: fill 0.3s linear 0s;
   fill: var(--animation-fill-color);
 }
 
@@ -377,9 +384,8 @@ main {
     height: 28px;
   }
 
-  .button-dialog {
-    margin: 0 auto;
-    padding: 12.5px 116px;
+  .text-icon-dialog {
+    padding-inline: 40px;
   }
 
   .label {
